@@ -80,14 +80,7 @@
             </xsd:annotation>
          </xsd:element>
          <!-- date - this element may occur many times with different date types -->
-         <xsd:element maxOccurs="unbounded" minOccurs="0" name="date"
-            type="dateStringType">
-            <xsd:annotation>
-               <xsd:documentation xml:lang="en">"The 'date' could reflect the original date
-                  the asset was created or the date of the representation of the work or other types
-                  of dates associated with an asset" </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+         <xsd:element maxOccurs="unbounded" minOccurs="0" name="date" type="dateStringType"/>
          <!-- identifier - this element may occur as many times as
                       desired, however an indentifier source attribute is required. -->
          <xsd:element maxOccurs="unbounded" minOccurs="1" name="identifier"
@@ -423,18 +416,7 @@
             </xsd:annotation>
          </xsd:element>
          <!-- instantiation/date -->
-         <xsd:element maxOccurs="unbounded" minOccurs="0" name="date"
-            type="dateStringType">
-            <xsd:annotation>
-               <xsd:documentation xml:lang="en">"Use the descriptor instantiation/date to specify
-                  the creation date for a particular instantiation of a media item across its life
-                  cycle. It is the moment in time that the media item was finalized during its
-                  production process and is forwarded to other divisions or agencies to make it
-                  ready for publication or distribution. A specific time may also be associated with
-                  the date. Or the date Issued, Available Start Dates and End
-                  Dates"</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+         <xsd:element maxOccurs="unbounded" minOccurs="0" name="date" type="dateStringType"/>
          <!-- dimensions-->
          <xsd:element maxOccurs="unbounded" minOccurs="0" name="dimensions"
             type="technicalStringType">
@@ -931,6 +913,15 @@
 
    <!-- dateStringType -->
    <xsd:complexType name="dateStringType">
+      <xsd:annotation>
+         <xsd:documentation xml:lang="en">"The 'date' element documents dates that pertain to the
+            parent element (asset or instantiation). This could document when an asset was created,
+            when an asset was originally broadcast, the creation date for a particular instantiation
+            of an asset, or when an instantiation was finalized during its production process and is
+            forwarded to other divisions or agencies to make it ready for publication or
+            distribution. A specific time may also be associated with the date. Or the date Issued,
+            Available Start Dates and End Dates"</xsd:documentation>
+      </xsd:annotation>
       <xsd:annotation>
          <xsd:documentation>"This dateStringType allows for the addition of the dateType
             attribute."</xsd:documentation>
