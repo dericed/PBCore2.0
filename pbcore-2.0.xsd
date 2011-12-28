@@ -247,29 +247,29 @@
                   age-appropriate materials."</xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <!-- the pbcore creator - may appear as many times as
-            necessary, but when it does appear, the creator tag is required.  the
-            creatorRole tag is optional. -->
-         <xsd:element maxOccurs="unbounded" minOccurs="0" name="pbcoreCreator">
+         <!-- creator - may appear as many times as
+            necessary, but when it does appear, the name tag is required.  the
+            role tag is optional. -->
+         <xsd:element maxOccurs="unbounded" minOccurs="0" name="creator">
             <xsd:annotation>
-               <xsd:documentation>"The pbcoreCreator element is a container for sub-elements
-                  'creator' and 'creatorRole'."</xsd:documentation>
+               <xsd:documentation>"The 'creator' element is a container for sub-elements
+                  'name' and 'role'."</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element maxOccurs="1" minOccurs="1" name="creator"
+                  <xsd:element maxOccurs="1" minOccurs="1" name="name"
                      type="affiliatedStringType">
                      <xsd:annotation>
-                        <xsd:documentation xml:lang="en">"The descriptor creator identifies a person
+                        <xsd:documentation xml:lang="en">"The descriptor 'name' identifies a person
                            or organization primarily responsible for creating a media item. The
                            creator may be considered an author and could be one or more people, a
                            business, organization, group, project or service." </xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element maxOccurs="unbounded" minOccurs="0" name="creatorRole"
+                  <xsd:element maxOccurs="unbounded" minOccurs="0" name="role"
                      type="sourceVersionStringType">
                      <xsd:annotation>
-                        <xsd:documentation xml:lang="en">"Use the descriptor creatorRole to identify
+                        <xsd:documentation xml:lang="en">"Use the descriptor 'role' to identify
                            the role played by the person or group identified in the companion
                            descriptor creator. Unlike print resources, there is usually no single
                            role, like an author, who has primary responsibility for the creation of
@@ -283,30 +283,30 @@
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <!-- the pbcore contributor - this element may appear as many times
-                      as necessary, but when it does appear, the contributor tag must
-                      appear inside it.  the contributor role is optional. -->
-         <xsd:element maxOccurs="unbounded" minOccurs="0" name="pbcoreContributor">
+         <!-- contributor - this element may appear as many times
+                      as necessary, but when it does appear, the name tag must
+                      appear inside it.  the role is optional. -->
+         <xsd:element maxOccurs="unbounded" minOccurs="0" name="contributor">
             <xsd:annotation>
-               <xsd:documentation>"The pbcoreContributor element is a container for sub-elements
-                  'contributor' and 'contributorRole'."</xsd:documentation>
+               <xsd:documentation>"The 'contributor' element is a container for sub-elements
+                  'name' and 'role'."</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element maxOccurs="1" minOccurs="1" name="contributor"
+                  <xsd:element maxOccurs="1" minOccurs="1" name="name"
                      type="affiliatedStringType">
                      <xsd:annotation>
-                        <xsd:documentation xml:lang="en">"The descriptor contributor identifies a
+                        <xsd:documentation xml:lang="en">"The descriptor 'name' identifies a
                            person or organization that has made substantial creative contributions
                            to the intellectual content within a media item. This contribution is
                            considered to be secondary to the primary author(s) (person or
                            organization) identified in the descriptor creator."</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element maxOccurs="unbounded" minOccurs="0" name="contributorRole"
+                  <xsd:element maxOccurs="unbounded" minOccurs="0" name="role"
                      type="contributorStringType">
                      <xsd:annotation>
-                        <xsd:documentation xml:lang="en">"Use the descriptor contributorRole to
+                        <xsd:documentation xml:lang="en">"Use the descriptor 'role' to
                            identify the role played by the person or group identified in the
                            companion descriptor contributor."</xsd:documentation>
                      </xsd:annotation>
@@ -314,30 +314,30 @@
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <!-- the pbcore publisher - this follows the same guidelines as the
+         <!-- publisher - this follows the same guidelines as the
                       contributor and the creator.  this may exist as many times as
-                      we wish, but inside it there must be a publisher tag.  a
-                      publisherRole tag is optional. -->
-         <xsd:element maxOccurs="unbounded" minOccurs="0" name="pbcorePublisher">
+                      we wish, but inside it there must be a name tag.  a
+                      role tag is optional. -->
+         <xsd:element maxOccurs="unbounded" minOccurs="0" name="publisher">
             <xsd:annotation>
-               <xsd:documentation>"The pbcorePublisher element is a container for sub-elements
-                  'publisher' and 'publisherRole'."</xsd:documentation>
+               <xsd:documentation>"The publisher element is a container for sub-elements
+                  'name' and 'role'."</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element maxOccurs="1" minOccurs="1" name="publisher"
+                  <xsd:element maxOccurs="1" minOccurs="1" name="name"
                      type="affiliatedStringType">
                      <xsd:annotation>
-                        <xsd:documentation xml:lang="en">"The descriptor publisher identifies a
+                        <xsd:documentation xml:lang="en">"The descriptor 'name' identifies a
                            person or organization primarily responsible for distributing or making a
                            media item available to others. The publisher may be a person, a
                            business, organization, group, project or service."</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element maxOccurs="unbounded" minOccurs="0" name="publisherRole"
+                  <xsd:element maxOccurs="unbounded" minOccurs="0" name="role"
                      type="sourceVersionStringType">
                      <xsd:annotation>
-                        <xsd:documentation xml:lang="en">"Use the descriptor publisherRole to
+                        <xsd:documentation xml:lang="en">"Use the descriptor 'role' to
                            identify the role played by the specific publisher or publishing entity
                            identified in the companion descriptor publisher."</xsd:documentation>
                      </xsd:annotation>
