@@ -36,7 +36,7 @@
    <xsd:complexType name="collectionType">
       <xsd:annotation>
          <xsd:documentation>"The collectionType allows the addition of attributes that
-            describe the PBCoreCollection. The attributes define the title, the description, the
+            describe the 'collection'. The attributes define the title, the description, the
             source, the reference and the date of the collection."</xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
@@ -69,12 +69,12 @@
             type="sourceVersionStringType">
             <xsd:annotation>
                <xsd:documentation xml:lang="en">"The descriptor 'type' indicates the broad
-                  editorial format of the assets contents. AssetType describes the PBCore record as
-                  a whole and at its highest level. Though a record may contain many instantiations
-                  of different formats and generations, for example, assetType may be used to
-                  indicate that they all represent a “program” or a “clip.” In FRBR language,
-                  assetType would be used to describe an asset at the “work” level. (Whereas
-                  “instantiationMediaType” would describe the “item” level.) This element is largely
+                  editorial format of the assets contents. The 'type' element describes the PBCore
+                  record as a whole and at its highest level. Though a record may contain many
+                  instantiations of different formats and generations, for example, assetType may be
+                  used to indicate that they all represent a "program" or a "clip." In FRBR
+                  language, assetType would be used to describe an asset at the "work" level.
+                  (Whereas "mediaType" would describe the "item" level.) This element is largely
                   based on the EBUCore element ObjectType:
                   http://www.ebu.ch/metadata/cs/ebu_ObjectTypeCodeCS.xml" </xsd:documentation>
             </xsd:annotation>
@@ -210,7 +210,7 @@
                         <xsd:documentation xml:lang="en">"The 'type' element is used to
                            identify the actual type of keywords that are being used by its companion
                            metadata element 'coverage.' coverageType provides a picklist of types,
-                           namely *spatial* or *temporal*, because coverage in intellectual content
+                           namely *Spatial* or *Temporal*, because coverage in intellectual content
                            may be expressed spatially by geographic location or it may also be
                            expressed temporally by a date, period, era, or time-based event."
                         </xsd:documentation>
@@ -451,10 +451,10 @@
          <xsd:element maxOccurs="1" minOccurs="1" name="location" type="xsd:string">
             <xsd:annotation>
                <xsd:documentation xml:lang="en">"The descriptor 'location' is considered
-                  to be an "address for an asset." For an organization or producer acting as
+                  to be an "address for an instantiation." For an organization or producer acting as
                   caretaker of a media resource, instantiationLocation may contain information about
-                  a specific shelf location for an asset, including an organization's name,
-                  departmental name, shelf ID and contact information. The instantiationLocation for
+                  a specific shelf location for an instantiation, including an organization's name,
+                  departmental name, shelf ID and contact information. The 'location' for
                   a data file or web page may include domain, path, filename or html
                   page."</xsd:documentation>
             </xsd:annotation>
@@ -747,8 +747,8 @@
          <!-- bitDepth -->
          <xsd:element maxOccurs="1" minOccurs="0" name="bitDepth" type="xsd:string">
             <xsd:annotation>
-               <xsd:documentation xml:lang="en">"The bitDepth element specifies "How
-                  Much" data is sampled when information is digitized, encoded, or converted for a
+               <xsd:documentation xml:lang="en">"The 'bitDepth' element specifies 'How
+                  Much' data is sampled when information is digitized, encoded, or converted for a
                   asset (specifically, audio, video, or image). Bit depth is measured in bits
                   and generally implies an arbitrary perception of quality during playback of a
                   asset (the higher the bit depth, the greater the
@@ -1030,7 +1030,7 @@
       </xsd:simpleContent>
    </xsd:complexType>
 
-   <!-- instantiationDigitalStringType -->
+   <!-- standardStringType -->
    <xsd:complexType name="standardStringType">
       <xsd:annotation>
          <xsd:documentation>"The standardStringType allows for the addition of a profile
