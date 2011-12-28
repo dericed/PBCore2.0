@@ -98,7 +98,7 @@
          </xsd:element>
          <!-- title - this element may occur as many times as
                       desired, optionally, a type attribute may appear -->
-         <xsd:element maxOccurs="unbounded" minOccurs="1" name="title" type="titleStringType">
+         <xsd:element maxOccurs="unbounded" minOccurs="1" name="title" type="string_w_type">
             <xsd:annotation>
                <xsd:documentation xml:lang="en">"The 'title' is a name given to the media item
                   you are cataloging. It is the unique name everyone should use to refer to or
@@ -962,10 +962,10 @@
       </xsd:simpleContent>
    </xsd:complexType>
 
-   <!-- titleStringType -->
-   <xsd:complexType name="titleStringType">
+   <!-- string_w_type -->
+   <xsd:complexType name="string_w_type">
       <xsd:annotation>
-         <xsd:documentation>"The titleStringType allows for the addition of a type attribute as
+         <xsd:documentation>"The string_w_type allows for the addition of a type attribute as
             well as the standard sourceVersionGroup attributes and a startEndTimeGroup or
             attributes."</xsd:documentation>
       </xsd:annotation>
