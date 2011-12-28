@@ -399,9 +399,7 @@
                   'asset'."</xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <!-- For Readability - DescriptionDocument sequence end -->
       </xsd:sequence>
-      <!-- For Readability - DescriptionDocument complexType end -->
    </xsd:complexType>
 
    <!-- the pbcore instantiationType -->
