@@ -366,15 +366,7 @@
          </xsd:element>
          <!-- annotation -->
          <xsd:element maxOccurs="unbounded" minOccurs="0" name="annotation"
-            type="annotationStringType">
-            <xsd:annotation>
-               <xsd:documentation xml:lang="en">"The descriptor 'annotation' is an element where
-                  you can catalog any supplementary information about the metadata used to describe
-                  the PBCore record. annotation clarifies element values, terms, descriptors,
-                  and vocabularies that may not be otherwise sufficiently
-                  understood."</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+            type="annotationStringType"/>
          <!-- part -->
          <xsd:element maxOccurs="unbounded" minOccurs="0" name="part" type="partType">
             <xsd:annotation>
@@ -636,15 +628,7 @@
          </xsd:element>
          <!-- instantiation/annotation -->
          <xsd:element maxOccurs="unbounded" minOccurs="0" name="annotation"
-            type="annotationStringType">
-            <xsd:annotation>
-               <xsd:documentation xml:lang="en">"The 'instantiation/annotation' element is used to
-                  catalog any supplementary information about an instantiation of the asset or
-                  the metadata used to describe it. It clarifies element values, terms, descriptors,
-                  and vocabularies that may not be otherwise sufficiently
-                  understood."</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+            type="annotationStringType"/>
          <!-- the pbcore instantiationPart -->
          <xsd:element name="instantiationPart" type="instantiationType" maxOccurs="unbounded"
             minOccurs="0">
@@ -821,14 +805,7 @@
          </xsd:element>
          <!-- annotation -->
          <xsd:element maxOccurs="unbounded" minOccurs="0" name="annotation"
-            type="annotationStringType">
-            <xsd:annotation>
-               <xsd:documentation xml:lang="en">"The 'annotation' element can store any
-                  supplementary information about a track or the metadata used to describe it. It
-                  clarifies element values, terms, descriptors, and vocabularies that may not be
-                  otherwise sufficiently understood."</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
+            type="annotationStringType"/>
          <!-- the pbcore instantiation essenceExtension -->
          <xsd:element maxOccurs="unbounded" minOccurs="0" name="essenceTrackExtension"
             type="extensionType">
@@ -1069,6 +1046,12 @@
 
    <!-- annotationStringType  -->
    <xsd:complexType name="annotationStringType">
+	  <xsd:annotation>
+         <xsd:documentation xml:lang="en">"The descriptor 'annotation' is an element where
+            you can catalog any supplementary information about the parent element (asset,
+            instantiation, or track). The 'annotation' clarifies element values, terms, descriptors,
+            and vocabularies that may not be otherwise sufficiently understood."</xsd:documentation>
+      </xsd:annotation>
       <xsd:annotation>
          <xsd:documentation>"This stringType added an annotationType attribute and a
             reference."</xsd:documentation>
