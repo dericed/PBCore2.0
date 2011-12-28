@@ -60,7 +60,7 @@
    <!-- assetType -->
    <xsd:complexType name="assetType">
       <xsd:annotation>
-         <xsd:documentation>"The defining of the DescriptionDocument allows its use as a single asset
+         <xsd:documentation>"The defining of the asset allows its use as a single asset
             or repeated use in the pbcoreCollection."</xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
@@ -95,12 +95,12 @@
             <xsd:annotation>
                <xsd:documentation xml:lang="en">"The descriptor pbcoreIdentifier is used to
                   reference or identify the entire record of metadata descriptions for a media item.
-                  The pbcoreIdentifier exists at the top level for a PBCore description and its
-                  associated description document (XML). Best practice is to identify the media item
-                  (whether analog or digital) by means of an unambiguous string or number
-                  corresponding to an established or formal identification system if one exists.
-                  Otherwise, use an identification method that is in use within your agency,
-                  station, production company, office, or institution."</xsd:documentation>
+                  The pbcoreIdentifier exists at the top level within an asset (XML). Best practice
+                  is to identify the media item (whether analog or digital) by means of an
+                  unambiguous string or number corresponding to an established or formal
+                  identification system if one exists. Otherwise, use an identification method that
+                  is in use within your agency, station, production company, office, or
+                  institution."</xsd:documentation>
             </xsd:annotation>
          </xsd:element>
          <!-- the pbcore title - this element may occur as many times as
