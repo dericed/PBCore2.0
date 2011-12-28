@@ -7,7 +7,6 @@
       <xsd:documentation xml:lang="en">"This is the PBCore version 2.0RC1 XML schema. All element
          descriptions can be found at http://www.pbcore.org"</xsd:documentation>
    </xsd:annotation>
-
    <!-- the collection root element -->
    <xsd:element name="collection" type="collectionType">
       <xsd:annotation>
@@ -15,7 +14,6 @@
             grouped in a number of ways to best serve the archivist."</xsd:documentation>
       </xsd:annotation>
    </xsd:element>
-
    <!-- the asset root element -->
    <xsd:element name="asset" type="assetType">
       <xsd:annotation>
@@ -23,7 +21,6 @@
             here."</xsd:documentation>
       </xsd:annotation>
    </xsd:element>
-
    <!-- the instantiation root element -->
    <xsd:element name="instantiation" type="instantiationType">
       <xsd:annotation>
@@ -31,7 +28,6 @@
             when referenced from other schemas."</xsd:documentation>
       </xsd:annotation>
    </xsd:element>
-
    <!-- the collectionType -->
    <xsd:complexType name="collectionType">
       <xsd:annotation>
@@ -56,7 +52,6 @@
       <xsd:attribute name="ref" type="xsd:string"/>
       <xsd:attribute name="date" type="xsd:string"/>
    </xsd:complexType>
-
    <!-- assetType -->
    <xsd:complexType name="assetType">
       <xsd:annotation>
@@ -386,7 +381,6 @@
          </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
-
    <!-- the pbcore instantiationType -->
    <xsd:complexType name="instantiationType">
       <xsd:annotation>
@@ -656,7 +650,6 @@
          </xsd:annotation>
       </xsd:attributeGroup>
    </xsd:complexType>
-
    <!-- trackType -->
    <xsd:complexType name="trackType">
       <xsd:annotation>
@@ -818,7 +811,6 @@
          </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
-
    <!-- extensionType -->
    <xsd:complexType name="extensionType">
       <xsd:annotation>
@@ -865,8 +857,6 @@
             type="embeddedType"> </xsd:element>
       </xsd:choice>
    </xsd:complexType>
-
-
    <!-- partType -->
    <xsd:complexType name="partType">
       <xsd:annotation>
@@ -887,7 +877,6 @@
          </xsd:extension>
       </xsd:complexContent>
    </xsd:complexType>
-
    <!-- dateStringType -->
    <xsd:complexType name="dateStringType">
       <xsd:annotation>
@@ -909,7 +898,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- sourceVersionStringType -->
    <xsd:complexType name="sourceVersionStringType">
       <xsd:annotation>
@@ -922,7 +910,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- requiredSourceVersionStringType -->
    <xsd:complexType name="requiredSourceVersionStringType">
       <xsd:annotation>
@@ -938,7 +925,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- string_w_type -->
    <xsd:complexType name="string_w_type">
       <xsd:annotation>
@@ -954,7 +940,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- descriptionStringType -->
    <xsd:complexType name="descriptionStringType">
       <xsd:annotation>
@@ -971,7 +956,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- sourceVersionStartEndStringType -->
    <xsd:complexType name="sourceVersionStartEndStringType">
       <xsd:annotation>
@@ -985,7 +969,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- affiliatedStringType -->
    <xsd:complexType name="affiliatedStringType">
       <xsd:annotation>
@@ -1001,7 +984,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- contributorStringType -->
    <xsd:complexType name="contributorStringType">
       <xsd:annotation>
@@ -1015,7 +997,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- technicalStringType  -->
    <xsd:complexType name="technicalStringType">
       <xsd:annotation>
@@ -1029,7 +1010,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- standardStringType -->
    <xsd:complexType name="standardStringType">
       <xsd:annotation>
@@ -1043,7 +1023,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- annotationStringType  -->
    <xsd:complexType name="annotationStringType">
 	  <xsd:annotation>
@@ -1063,7 +1042,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- rightsSummeryType -->
    <xsd:complexType name="rightsSummaryType">
       <xsd:annotation>
@@ -1092,7 +1070,6 @@
       </xsd:choice>
       <xsd:attributeGroup ref="startEndTimeGroup"/>
    </xsd:complexType>
-
    <!-- rightsLinkType -->
    <xsd:complexType name="rightsLinkType">
       <xsd:annotation>
@@ -1105,7 +1082,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- embeddedType -->
    <xsd:complexType name="embeddedType">
       <xsd:annotation>
@@ -1117,7 +1093,6 @@
       </xsd:sequence>
       <xsd:attribute name="annotation" type="xsd:string"/>
    </xsd:complexType>
-
    <!-- threeLetterStringType -->
    <xsd:complexType name="threeLetterStringType">
       <xsd:annotation>
@@ -1130,7 +1105,6 @@
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>
-
    <!-- threelettercode Algorithm -->
    <xsd:simpleType name="threeLetterCode">
       <xsd:annotation>
@@ -1142,7 +1116,6 @@
          <!-- allows for null -->
       </xsd:restriction>
    </xsd:simpleType>
-
    <!-- descriptionTypeSourceVersionGroup -->
    <xsd:attributeGroup name="descriptionTypeSourceVersionGroup">
       <xsd:annotation>
@@ -1155,7 +1128,6 @@
       <xsd:attribute name="typeVersion" type="xsd:string"/>
       <xsd:attribute name="typeAnnotation" type="xsd:string"/>
    </xsd:attributeGroup>
-
    <!-- sourceVersionGroup -->
    <xsd:attributeGroup name="sourceVersionGroup">
       <xsd:annotation>
@@ -1167,7 +1139,6 @@
       <xsd:attribute name="version" type="xsd:string"/>
       <xsd:attribute name="annotation" type="xsd:string"/>
    </xsd:attributeGroup>
-
    <!-- startEndTimeGroup -->
    <xsd:attributeGroup name="startEndTimeGroup">
       <xsd:annotation>
@@ -1178,7 +1149,6 @@
       <xsd:attribute name="endTime" type="xsd:string"/>
       <xsd:attribute name="timeAnnotation" type="xsd:string"/>
    </xsd:attributeGroup>
-
    <!-- segmentTypeSourceVersionGroup -->
    <xsd:attributeGroup name="segmentTypeSourceVersionGroup">
       <xsd:annotation>
@@ -1191,5 +1161,4 @@
       <xsd:attribute name="segmentTypeVersion" type="xsd:string"/>
       <xsd:attribute name="segmentTypeAnnotation" type="xsd:string"/>
    </xsd:attributeGroup>
-
 </xsd:schema>
