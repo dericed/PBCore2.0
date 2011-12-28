@@ -111,7 +111,7 @@
          <!-- subject - this element may occur as many times as
                       desired, optional attributes can note type as well as time annotations  -->
          <xsd:element maxOccurs="unbounded" minOccurs="0" name="subject"
-            type="subjectStringType">
+            type="string_w_type">
             <xsd:annotation>
                <xsd:documentation xml:lang="en">"The 'subject' is used to assign topical
                   headings or keywords that portray the intellectual content of the media item you
@@ -968,22 +968,6 @@
          <xsd:documentation>"The string_w_type allows for the addition of a type attribute as
             well as the standard sourceVersionGroup attributes and a startEndTimeGroup or
             attributes."</xsd:documentation>
-      </xsd:annotation>
-      <xsd:simpleContent>
-         <xsd:extension base="xsd:string">
-            <xsd:attribute name="type"/>
-            <xsd:attributeGroup ref="sourceVersionGroup"/>
-            <xsd:attributeGroup ref="startEndTimeGroup"/>
-         </xsd:extension>
-      </xsd:simpleContent>
-   </xsd:complexType>
-
-   <!-- subjectStringType -->
-   <xsd:complexType name="subjectStringType">
-      <xsd:annotation>
-         <xsd:documentation>"The subjectStringType allows for the addition of a subjectType
-            attribute as well as the standard sourceVersionGroup attributes and a startEndTimeGroup
-            or attributes."</xsd:documentation>
       </xsd:annotation>
       <xsd:simpleContent>
          <xsd:extension base="xsd:string">
