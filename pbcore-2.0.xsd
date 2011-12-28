@@ -24,8 +24,8 @@
       </xsd:annotation>
    </xsd:element>
 
-   <!-- the pbcoreInstantiationDocument root element -->
-   <xsd:element name="pbcoreInstantiationDocument" type="instantiationType">
+   <!-- the instantiation root element -->
+   <xsd:element name="instantiation" type="instantiationType">
       <xsd:annotation>
          <xsd:documentation>"This is entry point for an instantiation only record. Most likely used
             when referenced from other schemas."</xsd:documentation>
@@ -364,10 +364,10 @@
          </xsd:element>
          <!-- the pbcore instantiation - this contains all the details on how
                       the asset is actualized -->
-         <xsd:element maxOccurs="unbounded" minOccurs="0" name="pbcoreInstantiation"
+         <xsd:element maxOccurs="unbounded" minOccurs="0" name="instantiation"
             type="instantiationType">
             <xsd:annotation>
-               <xsd:documentation xml:lang="en">"The element 'pbcoreInstantiation' is a container
+               <xsd:documentation xml:lang="en">"The element 'instantiation' is a container
                   for sub-elements which describe an instance of a media item, i.e., a manifestation
                   of it in the real world." </xsd:documentation>
             </xsd:annotation>
@@ -680,8 +680,8 @@
             <xsd:annotation>
                <xsd:documentation>"The instantiationExtension element is a container to accomodate
                   instantiation-level metadata from external systems. Use it to supplement other
-                  metadata sub-elements of 'instantiationPart' or 'pbcoreInstantiationDocument' in
-                  which it appears."</xsd:documentation>
+                  metadata sub-elements of 'instantiationPart' or 'instantiation' in which it
+                  appears."</xsd:documentation>
             </xsd:annotation>
          </xsd:element>
       </xsd:sequence>
