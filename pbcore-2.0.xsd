@@ -16,8 +16,8 @@
       </xsd:annotation>
    </xsd:element>
 
-   <!-- the pbcoreDescriptionDocument root element -->
-   <xsd:element name="pbcoreDescriptionDocument" type="pbcoreDescriptionDocumentType">
+   <!-- the asset root element -->
+   <xsd:element name="asset" type="assetType">
       <xsd:annotation>
          <xsd:documentation>"Main entry point for a PBCore record. Single assets start
             here."</xsd:documentation>
@@ -40,9 +40,9 @@
             source, the reference and the date of the collection."</xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element maxOccurs="unbounded" minOccurs="1" ref="pbcoreDescriptionDocument">
+         <xsd:element maxOccurs="unbounded" minOccurs="1" ref="asset">
             <xsd:annotation>
-               <xsd:documentation xml:lang="en">"The pbcoreDescriptionDocument assembles together
+               <xsd:documentation xml:lang="en">"The asset assembles together
                   all of PBCore knowledge items into a single data record organized in a
                   hierarchical structure. For PBCore these knowledge items are metadata descriptions
                   of media, including all the knowledge items and metadata terms and values
@@ -57,8 +57,8 @@
       <xsd:attribute name="collectionDate" type="xsd:string"/>
    </xsd:complexType>
 
-   <!-- pbcoreDescriptionDocumentType -->
-   <xsd:complexType name="pbcoreDescriptionDocumentType">
+   <!-- assetType -->
+   <xsd:complexType name="assetType">
       <xsd:annotation>
          <xsd:documentation>"The defining of the DescriptionDocument allows its use as a single asset
             or repeated use in the pbcoreCollection."</xsd:documentation>
@@ -387,7 +387,7 @@
          <xsd:element maxOccurs="unbounded" minOccurs="0" name="pbcorePart" type="pbcorePartType">
             <xsd:annotation>
                <xsd:documentation>"The pbcorePart element is a container for repeating the same set
-                  of sub-elements used by super-element 'pbcoreDescriptionDocument. e.g. this allows
+                  of sub-elements used by super-element 'asset. e.g. this allows
                   for defining segments, stories or episodes." </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
@@ -397,7 +397,7 @@
             <xsd:annotation>
                <xsd:documentation>"The pbcoreExtension element is a container to accomodate metadata
                   from external systems. Use it to supplement other sub-elements of
-                  'pbcoreDescriptionDocument'."</xsd:documentation>
+                  'asset'."</xsd:documentation>
             </xsd:annotation>
          </xsd:element>
          <!-- For Readability - DescriptionDocument sequence end -->
@@ -916,11 +916,11 @@
       <xsd:annotation>
          <xsd:documentation>"This uses a common structure to allow for the repeating of descriptive
             sub-documents to define different segments, episodes etc., just as super-element
-            'pbcoreDescriptionDocument' can be collected and used to describe higher-level media
+            'asset' can be collected and used to describe higher-level media
             programs."</xsd:documentation>
       </xsd:annotation>
       <xsd:complexContent>
-         <xsd:extension base="pbcoreDescriptionDocumentType">
+         <xsd:extension base="assetType">
             <xsd:attributeGroup ref="startEndTimeGroup">
                <xsd:annotation>
                   <xsd:documentation>"The group of attributes "startTime', 'endTime' and
